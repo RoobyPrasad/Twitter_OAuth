@@ -1,0 +1,52 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+header, footer, article, section, aside,
+hgroup, menu, nav, figure,
+time, mark, audio, video{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+	font-size:100%;
+	background:transparent;
+	vertical-align:baseline;
+}
+
+html, body{
+	height:100%;
+	line-height:1;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:400;
+	text-rendering:optimizeLegibility;
+}
+
+a:hover, a:visited, a:active, a:link{outline:none;}
+
+/* HTML5 tags set to display block */
+header, footer, article, section, hgroup, nav, aside, figure{
+	display:block;
+}
+
+input, select{vertical-align:middle; outline:none;}
+
+ol, ul{list-style:none;}
+
+table{border-collapse:collapse; border-spacing:0;}
+
+.tableCell{display:table-cell; vertical-align:middle;}
+
+td, td img{vertical-align:top;}
+
+sub{vertical-align:sub; font-size:smaller;}
+
+sup{vertical-align:super; font-size:smaller;}

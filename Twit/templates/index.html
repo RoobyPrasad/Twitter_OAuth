@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block extra_js%}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.charactercounter.js"></script>
+
+<script>
+    $(function(){
+        $("#tweet").characterCounter({
+            counterCssClass: 'help-block',
+            limit: 140
+        });
+
+        $("#formid").submit(function(event) {
+            event.preventDefault();
+            var $form = $(this),
+                    url = $form.attr('action');
+
+            if ($('#tweet').val() == ''){
+                alert('Please enter the message!');
+                return false;
+            }
+            var posting = $.post( url, { tweet: $('#tweet').val()} );
+            posting.done(function( data ) {
+                $('#tweet').val('');
+                alert('successfully posted.');
+                fs.main.init({});
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="articleWrapper">
+        <div style="text-align: center; padding: 50px 99px">
+            {% if user.is_anonymous %}
+                <a href="{% url 'twitterapp_login' %}"><img src="{{ STATIC_URL }}img/twitter.png"/></a>
+            {% else %}
+                <form id="formid" action="/twitterapp/tweet-message/" method="post">
+                    <textarea rows="4" id="tweet" class="form-control" style="width:500px;"></textarea>
+                    <input type="submit" id="submitButton" name="submitButton" value="Tweet" class="btn btn-info">
+                </form>
+                <!--<a href="{% url 'twitterapp_recent_tweets' %}">Recent Tweets</a>-->
+            {% endif %}
+        </div>
+    </div>
+    <div class="twitterWrapper">
+        <div id="tweetList"></div>
+    </div>
+{% endblock %}

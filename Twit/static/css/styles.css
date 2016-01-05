@@ -1,0 +1,76 @@
+body {
+	margin: 0px;
+	background-image: url("/static/img/lightpaperfibers.jpg");
+}
+.clear{clear:both}
+.ppHeader{
+	background-color: #f4f4f4;
+	height: 80px;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.35);
+}
+
+.ppFooter{
+    background-color: #f4f4f4;
+	height: 25px;
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.35);
+}
+
+.headerWrapper{
+	width: 1024px;
+	margin: 0px auto;
+    padding: 11px 0px;
+}
+.fl{float: left;}
+.fr{float: right;}
+
+
+.articleWrapper{
+    width: 750px;
+    height: 240px;
+    padding: 20px;
+    margin: 0px auto;
+}
+.articleWrapper .test{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.footerWrap{
+    font-size:12px;
+    width: 200px;
+    margin: 0px auto;
+}
+.headerText{
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    color: #e08600;
+}
+
+.userDetails{
+    padding: 25px;
+}
+
+.twitterWrapper{
+    width: 750px;
+    height: 390px;
+    padding: 20px;
+    margin: 0px auto;
+    overflow: auto;
+}
+
+.twitterWrapper .test{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.btn-info {
+    margin-top: -33px;
+}
+
+.help-block {
+    width: 400px;
+}
